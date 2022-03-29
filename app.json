@@ -9,12 +9,12 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/fjgaming212/Deploy-Flicks",
+  "repository": "https://github.com/fjgaming212/Flicks-Userbot",
   "telegram": "https://t.me/FJ_GAMING",
   "success_url": "https://t.me/FlicksSupport",
   "stack": "container",
   "env": {
-    "API_KEY": {
+    "API_ID": {
       "description": "Dapatkan Api Key di web my.telegram.org ,masukan yang API ID",
       "required": true
     },
@@ -23,34 +23,16 @@
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di https://replit.com/@fjgaming212/StringSession#main.py atau di t.me/StringSessionFlicksBot",
+      "description": "Dapatkan String Session di https://replit.com/@fjgaming212/StringSession#main.py atau di t.me/FlicksStringSessionBot",
       "required": true
     },
     "HEROKU_APP_NAME": {
       "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
-      "value": "Masukan seperti yang kamu isi tadi di atas ALIVE_NAME",
       "required": true
     },
     "HEROKU_API_KEY": {
       "description": "Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
       "value": "Check Di Heroku Dashboard Mu",
-      "required": true
-    },
-    "BOTLOG_CHATID": {
-      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "Isi ID Grup Anda, Contoh -1001404xxx",
-      "required": true
-    },
-    "ALIVE_NAME": {
-      "description": "Nama untuk menunjukan pesan .alive",
-      "required": true
-    },
-    "BOT_TOKEN": {
-      "description": "Setel ini untuk mengaktifkan inline bot helper. dapatkan tokennya dari @BotFather",
-      "required": true
-    },
-    "BOT_USERNAME": {
-      "description": "Username bot yang Anda buat dengan @BotFather,masukan tanpa @",
       "required": true
     }
   },
@@ -77,5 +59,12 @@
     "url": "https://github.com/amivin/aria2-heroku"
   }, {
     "url": "https://github.com/stevo550/buildpack-slug-cleaner"
-  }]
+  }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
